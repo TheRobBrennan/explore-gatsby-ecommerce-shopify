@@ -5,6 +5,9 @@
   "keywords": ["gatsby", "ecommerce", "shopify"],
   "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
   "license": "ISC",
+  "scripts": {
+    "start": "cd app && npm start"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheRobBrennan/explore-gatsby-ecommerce-shopify.git"
