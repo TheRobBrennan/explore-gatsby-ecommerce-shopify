@@ -96,3 +96,7 @@ Please ensure the `Storefront API Permissions` listed below are selected:
 Once you are satisfied with your settings, please review the `Shopify API Terms` and then click on `I understand, create the app`
 
 Scroll to the bottom to find the `Storefront access token` - this API token is not secret and can be placed in any JavaScript file or any public HTML document.
+
+#### Create a product
+
+Navigate to the `Products` menu and create a sample product for your store.
