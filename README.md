@@ -53,3 +53,17 @@ $ npm run deploy
 ```
 
 In the example deployment above, note that our site is available at [https://explore-gatsby-ecommerce-shopify.therobbrennan.now.sh](https://explore-gatsby-ecommerce-shopify.therobbrennan.now.sh) as well as a link to this specific deployment [https://explore-gatsby-ecommerce-shopify-5ykm942bk.now.sh ](https://explore-gatsby-ecommerce-shopify-5ykm942bk.now.sh ) along with the free `.now.sh` [URL](https://explore-gatsby-ecommerce-shopify.now.sh) associated with your project.
+
+## Shopify
+
+### Initial setup
+
+#### Create a developer account
+
+To create a developer account for Shopify, you will want to go to [http://developers.shopify.com/](http://developers.shopify.com/) and sign up for a free account.
+
+#### Create a new development store
+
+Once you have verified your developer account for Shopify, navigate to the `Stores` menu and follow the on-screen instructions to add a new development store.
+
+For the purposes of this demo, I've created a demo store to play around with at [https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com](https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com)
