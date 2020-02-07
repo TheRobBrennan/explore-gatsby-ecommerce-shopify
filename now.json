@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "explore-gatsby-ecommerce-shopify",
+  "builds": [
+    {
+      "src": "app/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)", "dest": "app/$1"
+    }
+  ]
+}
