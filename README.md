@@ -105,7 +105,7 @@ Navigate to the `Products` menu and create a sample product for your store.
 
 You'll want to define the `gatsby-source-shopify` plugin with the following options:
 
-+ `shopName` - This is the first part of URL. In the above section, I gave my app the name `therobbrennan-explore-gatsby-ecommerce-s0` - with the Shopify store available at [https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com](https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com)
++ `shopName` - This is the first part of the URL. In the above section, I gave my app the name `therobbrennan-explore-gatsby-ecommerce-s0` - with the Shopify store available at [https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com](https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com)
 + `accessToken` - This is `Storefront access token` mentioned above
 + `verbose` - Let's set this to `true` for now while we are developing
 + `paginationSize` - Ideally this number should be as small as possible. We're going to use a value of `250` for the time being
