@@ -1,0 +1,16 @@
+{
+  "name": "explore-gatsby-ecommerce-shopify",
+  "version": "0.0.0",
+  "description": "This project has been created to explore some initial thoughts and ideas when working with [Gatsby](https://www.gatsbyjs.org) and [Shopify](https://www.shopify.com)",
+  "keywords": ["gatsby", "ecommerce", "shopify"],
+  "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRobBrennan/explore-gatsby-ecommerce-shopify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheRobBrennan/explore-gatsby-ecommerce-shopify/issues"
+  },
+  "homepage": "https://github.com/TheRobBrennan/explore-gatsby-ecommerce-shopify#readme"
+}
