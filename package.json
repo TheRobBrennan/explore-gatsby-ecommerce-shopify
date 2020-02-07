@@ -6,7 +6,9 @@
   "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
   "license": "ISC",
   "scripts": {
-    "start": "cd app && npm start"
+    "start": "cd app && npm start",
+    "deploy": "npm run deploy:zeit-now",
+    "deploy:zeit-now": "now"
   },
   "repository": {
     "type": "git",
