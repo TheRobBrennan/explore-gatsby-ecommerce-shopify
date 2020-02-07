@@ -100,3 +100,60 @@ Scroll to the bottom to find the `Storefront access token` - this API token is n
 #### Create a product
 
 Navigate to the `Products` menu and create a sample product for your store.
+
+#### Configure Shopify as a Gatsby source
+
+You'll want to define the `gatsby-source-shopify` plugin with the following options:
+
++ `shopName` - This is the first part of URL. In the above section, I gave my app the name `therobbrennan-explore-gatsby-ecommerce-s0` - with the Shopify store available at [https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com](https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com)
++ `accessToken` - This is `Storefront access token` mentioned above
++ `verbose` - Let's set this to `true` for now while we are developing
++ `paginationSize` - Ideally this number should be as small as possible. We're going to use a value of `250` for the time being
+
+```js
+// app/gatsby-config.js
+: : :
+  plugins: [
+    : : :
+    {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        shopName: 'therobbrennan-explore-gatsby-ecommerce-s0',
+        // Storefront access token that is not secret and can be shared with any JavaScript or public HTML file safely
+        accessToken: 'b74e3661addd04b85ab06fc6cd7fef39',
+        // Turn on verbose mode to have detailed output while developing with Gatsby and Shopify
+        verbose: true,
+        // Keep the pagination size reasonable
+        paginationSize: 250,
+      }
+    },
+    : : :
+  ],
+: : :
+```
+
+#### Verify your setup
+
+To verify that your Gatsby app has been configured correctly, restart your Gatsby app and then view the GraphiQL IDE with this sample URL/query - [http://localhost:8000/___graphql?query=%7B%0A%20%20allShopifyProduct%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%20%20publishedAt(fromNow%3A%20true)%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A](http://localhost:8000/___graphql?query=%7B%0A%20%20allShopifyProduct%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%20%20publishedAt(fromNow%3A%20true)%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+
+When you run the above query, you should see a result similar to:
+
+```json
+{
+  "data": {
+    "allShopifyProduct": {
+      "edges": [
+        {
+          "node": {
+            "id": "Shopify__Product__Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzQ1MTE3MTc1ODkxMjM=",
+            "title": "My T-shirt",
+            "publishedAt": "19 minutes ago"
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+NOTE: If you make any changes to the Shopify products while the app is already running, you will need to restart the server.
