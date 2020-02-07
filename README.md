@@ -66,4 +66,33 @@ To create a developer account for Shopify, you will want to go to [http://develo
 
 Once you have verified your developer account for Shopify, navigate to the `Stores` menu and follow the on-screen instructions to add a new development store.
 
-For the purposes of this demo, I've created a demo store to play around with at [https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com](https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com)
+I've created a demo store to play around with at [https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com](https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com)
+
+#### Create a private app
+
+Now that we have a store defined, navigate to the `Apps` menu, click on the link to `Manage private apps` and follow the on-screen instructions to `Create a new private app` with the following `App Details`:
+
++ Private app name - Use something that makes sense for you (e.g. `explore-gatsby-ecommerce-shopify`)
++ Emergency developer email - Your email address
+
+The default values for the `Admin API` are fine for now. As of this writing, the ones immediately visible were:
+
++ Store content like articles, blogs, comments, pages, and redirects - `Read access`
++ Customer details and customer groups - `Read access`
++ Orders, transactions and fulfillments - `Read access`
++ Products, variants and collections - `Read access`
+
+Be sure that the `Webhook API version` is using the latest - `2020-01 (Latest)` as of this writing.
+
+Please ensure the `Storefront API Permissions` listed below are selected:
+
++ Read products, variants, and collections
++ Read product tags
++ Read and modify customer details
++ Read customer tags
++ Read and modify checkouts
++ Read content like articles, blogs, and comments
+
+Once you are satisfied with your settings, please review the `Shopify API Terms` and then click on `I understand, create the app`
+
+Scroll to the bottom to find the `Storefront access token` - this API token is not secret and can be placed in any JavaScript file or any public HTML document.
