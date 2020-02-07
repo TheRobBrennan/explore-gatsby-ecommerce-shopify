@@ -9,6 +9,8 @@ module.exports = {
     {
       resolve: `gatsby-source-shopify`,
       options: {
+        // Shopify URL is https://therobbrennan-explore-gatsby-ecommerce-s0.myshopify.com
+        shopName: 'therobbrennan-explore-gatsby-ecommerce-s0',
         // Storefront access token that is not secret and can be shared with any JavaScript or public HTML file safely
         accessToken: 'b74e3661addd04b85ab06fc6cd7fef39',
         // Turn on verbose mode to have detailed output while developing with Gatsby and Shopify
