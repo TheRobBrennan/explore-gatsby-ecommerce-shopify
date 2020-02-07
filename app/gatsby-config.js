@@ -7,6 +7,17 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        // Storefront access token that is not secret and can be shared with any JavaScript or public HTML file safely
+        accessToken: 'b74e3661addd04b85ab06fc6cd7fef39',
+        // Turn on verbose mode to have detailed output while developing with Gatsby and Shopify
+        verbose: true,
+        // Keep the pagination size reasonable
+        paginationSize: 250,
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
