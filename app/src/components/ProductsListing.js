@@ -13,7 +13,7 @@ const PRODUCTS_LISTING_QUERY = graphql`
               id
               childImageSharp {
                 fixed(width: 200) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_withWebp_tracedSVG
                 }
               }
             }
