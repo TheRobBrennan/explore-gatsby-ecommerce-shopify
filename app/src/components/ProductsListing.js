@@ -8,6 +8,16 @@ const PRODUCTS_LISTING_QUERY = graphql`
       edges {
         node {
           id
+          images {
+            localFile {
+              id
+              childImageSharp {
+                fixed(width: 200) {
+                  ...GatsbyImageSharpFixed_withWebp_tracedSVG
+                }
+              }
+            }
+          }
           title
           publishedAt(fromNow: true)
           description
